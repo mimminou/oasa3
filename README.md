@@ -42,8 +42,8 @@ molecule = file_to_mol(mFile)        #? parse this file into the method to creat
 - 3 : Generate coordinates ( Converting 3D to 2D ), and remove unimportant hydrogens if you wish
 ```
 coordGenerator = coords_generator(18)       #? init coords_generator class with bond length of 18 units
-coordGenerator.calculate_coords(mol=molecule,bond_length=20,force=1)     #?Generate coordinates for depiction with bond length 18 units, 2nd argument is to force recalculating coords.
-molecule.remove_unimportant_hydrogens() #? this generates a 6th dimentional matrix that handles spacetime conformation of deuterium atoms to gen.... It removes non essential hydrogen atoms in the depiction.
+coordGenerator.calculate_coords(mol=molecule,bond_length=18,force=1)     #?Generate coordinates for depiction with bond length 18 units, 2nd argument is to force recalculating coords.
+molecule.remove_unimportant_hydrogens() #? this generates a 6th dimentional matrix that handles spacetime conformation of deuterium atoms to gen.... It removes non essential hydrogen atoms in the depiction, i like dry humour.
 
 ```
 - 4 : Initialize the depiction class and write the image into a file.

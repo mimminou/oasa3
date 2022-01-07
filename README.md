@@ -1,3 +1,9 @@
+# NOTICE : 
+
+OASA is now hosted in here by the main maintainer : https://gitlab.com/oasa/oasa and requires Python 2.6+
+
+the pip package is however still hosted under the oasa3 name and is now synced with the main repo.
+
 # OASA3
 
 ### What is OASA3
@@ -7,7 +13,7 @@ Do not expect everything to work, unit testing ran 77 tests with only 1 failed r
 
 ### Installation
 
-you can obtain OASA3 from pip :
+you can obtain the latest version of OASA3 from pip :
 
 ```
 pip install oasa3

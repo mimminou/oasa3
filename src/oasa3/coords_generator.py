@@ -386,8 +386,8 @@ class coords_generator:
                 x += self.bond_length * cos(a)
                 y += self.bond_length * sin(a)
             # end of dry run, we can scale the bond_length now
-            length = geometry.line_length((v1.x, v1.y, v2.x, v2.y))
-            real_length = geometry.line_length((v1.x, v1.y, x, y))
+            length = geometry.line_length(v1.x, v1.y, v2.x, v2.y)
+            real_length = geometry.line_length(v1.x, v1.y, x, y)
             bl = self.bond_length * length / real_length
             gcoords = gen_angle_stream(deg_to_rad(da), start_from=ca)
             # and here we go

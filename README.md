@@ -1,19 +1,6 @@
-# NOTICE : 
+# Installation
 
-OASA is now hosted in here by the main maintainer : https://gitlab.com/oasa/oasa and requires Python 2.6+
-
-the pip package is however still hosted under the oasa3 name and is now synced with the main repo.
-
-# OASA3
-
-### What is OASA3
-OASA3 is a Python 3 port of the OASA python library, it can be a good alternative to other depiction libraries such as pybel (which ironically is based on OASA itself) and the notoriously hard to install RDKIT.
-
-Do not expect everything to work, unit testing ran 77 tests with only 1 failed run and i have no idea how to fix it because there is no documentation, all depiction functions and coordinate generation tools should work flawlessly though, which is all i needed from this library anyways.
-
-### Installation
-
-you can obtain the latest version of OASA3 from pip :
+you can obtain OASA from pip :
 
 ```
 pip install oasa3
@@ -30,9 +17,9 @@ pip install oasa3
 
 - 1 : Import the required stuff.
 ```
-from oasa3.cairo_out import cairo_out
-from oasa3.molfile import file_to_mol   # For MOL / SDF files only, import other modules for other file formats
-from oasa3.coords_generator import coords_generator
+from oasa.cairo_out import cairo_out
+from oasa.molfile import file_to_mol   # For MOL / SDF files only, import other modules for other file formats
+from oasa.coords_generator import coords_generator
 ```
 
 - 2 : Open the file you want to depict
@@ -50,7 +37,6 @@ molecule = file_to_mol(mFile)        #? parse this file into the method to creat
 coordGenerator = coords_generator(18)       #? init coords_generator class with bond length of 18 units
 coordGenerator.calculate_coords(mol=molecule,bond_length=18,force=1)     #?Generate coordinates for depiction with bond length 18 units, 2nd argument is to force recalculating coords.
 molecule.remove_unimportant_hydrogens() #? this generates a 6th dimentional matrix that handles spacetime conformation of deuterium atoms to gen.... It removes non essential hydrogen atoms in the depiction, i like dry humour.
-
 ```
 - 4 : Initialize the depiction class and write the image into a file.
 ```
@@ -58,11 +44,11 @@ molecule.remove_unimportant_hydrogens() #? this generates a 6th dimentional matr
 #? Further arguments can be found in the original OASA repo or in the end of file here  :  https://github.com/mimminou/PDBASER/blob/main/GUI/Build/MolHandler.py
 
 c = cairo_out(scaling=4, margin=15, font_size=10, bond_width=2.0,
-                                      background_color=(0, 0, 0, 0), bond_second_line_shortening=0.08,
-                                      color_bonds=False, space_around_atom=2.0,
-                                      line_width=1.2,
-                                      show_hydrogens_on_hetero= True,
-                                      wedge_width= 5)
+            background_color=(0, 0, 0, 0), bond_second_line_shortening=0.08,
+            color_bonds=False, space_around_atom=2.0,
+            line_width=1.2,
+            show_hydrogens_on_hetero= True,
+            wedge_width= 5)
 
 #? Write the generated image to a file with .png format, supports also vectors in .svg, and .pdf
 c.mol_to_cairo(mol=molecule,filename="GDP.png",format="png")
@@ -72,10 +58,6 @@ Bonus step
 #? Get molecular weight of this molecule : 
 mw = molecule.weight
 formated_molecule_weight = "{:.2f}".format(mw)
-
-
-#! If you liked this fork, please check out the project that inspired me to work on porting this library : 
-# https://github.com/mimminou/PDBASER
 ```
 
 
@@ -104,7 +86,7 @@ This is an example of PNG export:
 
 
 ### Requirements
-* OASA3 needs python 3.6 or higher to run properly.
+* OASA needs python 2.6 or higher to run properly.
 
 
 ### STATUS
@@ -140,5 +122,5 @@ bellow are summarized the limitations of the library. it does by no means mean t
 
 
 ##### CAIRO_OUT:
-- pycairo may be required to make use of cairo_out functionality (although depiction worked on Ubuntu 21.10 without it installed in python.)
+- pycairo is required to make use of cairo_out functionality, and is automatically installed when installing OASA.
 - PNG, PDF and SVG export is supported

@@ -1,3 +1,7 @@
+
+This repo (https://github.com/mimminou/oasa3/) will only serve as a base repo for maintaining the Pypi package, if you intend to contribute, please fork the official repo from gitlab.
+
+
 # Installation
 
 you can obtain OASA from pip :
@@ -36,7 +40,7 @@ molecule = file_to_mol(mFile)        #? parse this file into the method to creat
 ```
 coordGenerator = coords_generator(18)       #? init coords_generator class with bond length of 18 units
 coordGenerator.calculate_coords(mol=molecule,bond_length=18,force=1)     #?Generate coordinates for depiction with bond length 18 units, 2nd argument is to force recalculating coords.
-molecule.remove_unimportant_hydrogens() #? this generates a 6th dimentional matrix that handles spacetime conformation of deuterium atoms to gen.... It removes non essential hydrogen atoms in the depiction, i like dry humour.
+molecule.remove_unimportant_hydrogens() #? removes non essential hydrogen atoms in the depiction.
 ```
 - 4 : Initialize the depiction class and write the image into a file.
 ```

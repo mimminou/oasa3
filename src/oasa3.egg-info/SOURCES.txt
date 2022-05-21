@@ -1,6 +1,7 @@
 LICENSE
 README.md
 pyproject.toml
+setup.cfg
 setup.py
 src/oasa/__init__.py
 src/oasa/atom.py
@@ -38,6 +39,11 @@ src/oasa/subsearch_data.py
 src/oasa/svg_out.py
 src/oasa/transform.py
 src/oasa/transform3d.py
+src/oasa3.egg-info/PKG-INFO
+src/oasa3.egg-info/SOURCES.txt
+src/oasa3.egg-info/dependency_links.txt
+src/oasa3.egg-info/requires.txt
+src/oasa3.egg-info/top_level.txt
 src/oasa/graph/__init__.py
 src/oasa/graph/basic.py
 src/oasa/graph/diedge.py
@@ -45,8 +51,3 @@ src/oasa/graph/digraph.py
 src/oasa/graph/edge.py
 src/oasa/graph/graph.py
 src/oasa/graph/vertex.py
-src/oasa3.egg-info/PKG-INFO
-src/oasa3.egg-info/SOURCES.txt
-src/oasa3.egg-info/dependency_links.txt
-src/oasa3.egg-info/requires.txt
-src/oasa3.egg-info/top_level.txt

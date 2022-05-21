@@ -1,0 +1,3 @@
+Run tests using unittest module from the current root oasa3 folder using :
+python -m unittest tests.unittests
+python -m unittest tests.tests

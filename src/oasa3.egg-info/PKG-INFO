@@ -1,8 +1,7 @@
 Metadata-Version: 2.1
 Name: oasa3
-Version: 0.14.0
+Version: 0.14.1
 Summary: OASA is a free cheminformatics library written in Python
-Home-page: UNKNOWN
 Author: Beda Kosata
 Author-email: beda@zirael.org
 Maintainer: Reinis Danne
@@ -21,6 +20,10 @@ Classifier: Operating System :: Unix
 Requires-Python: >=2.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
+
+
+This repo (https://github.com/mimminou/oasa3/) will only serve as a base repo for maintaining the Pypi package, if you intend to contribute, please fork the official repo from gitlab.
+
 
 # Installation
 
@@ -60,7 +63,7 @@ molecule = file_to_mol(mFile)        #? parse this file into the method to creat
 ```
 coordGenerator = coords_generator(18)       #? init coords_generator class with bond length of 18 units
 coordGenerator.calculate_coords(mol=molecule,bond_length=18,force=1)     #?Generate coordinates for depiction with bond length 18 units, 2nd argument is to force recalculating coords.
-molecule.remove_unimportant_hydrogens() #? this generates a 6th dimentional matrix that handles spacetime conformation of deuterium atoms to gen.... It removes non essential hydrogen atoms in the depiction, i like dry humour.
+molecule.remove_unimportant_hydrogens() #? removes non essential hydrogen atoms in the depiction.
 ```
 - 4 : Initialize the depiction class and write the image into a file.
 ```
@@ -148,5 +151,3 @@ bellow are summarized the limitations of the library. it does by no means mean t
 ##### CAIRO_OUT:
 - pycairo is required to make use of cairo_out functionality, and is automatically installed when installing OASA.
 - PNG, PDF and SVG export is supported
-
-

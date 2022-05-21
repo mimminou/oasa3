@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
       name             = 'oasa3',
-      version          = '0.14.0',
+      version          = '0.14.1',
       description      = "OASA is a free cheminformatics library written in Python",
       author           = "Beda Kosata",
       author_email     = "beda@zirael.org",

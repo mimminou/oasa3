@@ -8,9 +8,7 @@ This repo (https://github.com/mimminou/oasa3) will now serve for building and ma
 # OASA3
 
 ### What is OASA3
-OASA3 is a Python 3 port of the OASA python library, it can be a good alternative to other depiction libraries such as pybel (which ironically is based on OASA itself) and the notoriously hard to install RDKIT.
-
-Do not expect everything to work, unit testing ran 77 tests with only 1 failed run and i have no idea how to fix it because there is no documentation, all depiction functions and coordinate generation tools should work flawlessly though, which is all i needed from this library anyways.
+OASA3 is a Python 3 compatible version of the OASA python library, it can be a good alternative to other depiction libraries such as pybel (which ironically is based on OASA itself) and the notoriously hard to install RDKIT.
 
 ### Installation
 
@@ -50,7 +48,7 @@ molecule = file_to_mol(mFile)        #? parse this file into the method to creat
 ```
 coordGenerator = coords_generator(18)       #? init coords_generator class with bond length of 18 units
 coordGenerator.calculate_coords(mol=molecule,bond_length=18,force=1)     #?Generate coordinates for depiction with bond length 18 units, 2nd argument is to force recalculating coords.
-molecule.remove_unimportant_hydrogens() #? this generates a 6th dimentional matrix that handles spacetime conformation of deuterium atoms to gen.... It removes non essential hydrogen atoms in the depiction, i like dry humour.
+molecule.remove_unimportant_hydrogens() #? removes non essential hydrogen atoms in the depiction.
 
 ```
 - 4 : Initialize the depiction class and write the image into a file.

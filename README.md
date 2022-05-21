@@ -3,6 +3,7 @@
 OASA is now hosted in here by the main maintainer : https://gitlab.com/oasa/oasa and requires Python 2.6+
 
 the pip package is however still hosted under the oasa3 name and is now synced with the main repo.
+This repo (https://github.com/mimminou/oasa3) will now serve for building and maintaining the pypi package only.
 
 # OASA3
 
@@ -104,7 +105,7 @@ This is an example of PNG export:
 
 
 ### Requirements
-* OASA3 needs python 3.6 or higher to run properly.
+* OASA3 needs python 2.6 or higher to run properly.
 
 
 ### STATUS
